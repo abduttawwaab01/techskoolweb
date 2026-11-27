@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Techskool Chat</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">TC</span>
+      <span class="brand-name">Techskool <span>Chat</span></span>
+    </a>
+    <div class="topbar-right">
+      <div class="user-chip">
+        <span class="avatar" id="userAvatar">?</span>
+        <span id="currentUser">Loading…</span>
+        <span id="roleBadge"></span>
+      </div>
+      <a href="/admin" class="btn btn-ghost" id="adminLink" hidden>Admin</a>
+      <button type="button" class="btn btn-ghost" id="logoutBtn">Log out</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h2>Rooms</h2>
+        <button type="button" class="sidebar-item active" id="generalRoom">
+          <span class="item-main"><span class="item-title"># general</span><span class="item-sub">Everyone's room</span></span>
+        </button>
+      </div>
+      <div class="sidebar-section">
+        <h2>Direct messages</h2>
+        <div id="dmList"><p class="sidebar-empty">No conversations yet.</p></div>
+      </div>
+      <div class="sidebar-section">
+        <h2>People</h2>
+        <div id="userList"><p class="sidebar-empty">Loading people…</p></div>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <h1 id="chatTitle"># general</h1>
+          <p id="chatSubtitle">A place for the whole team</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <button type="button" class="btn btn-ghost btn-sm sidebar-toggle" id="sidebarToggle">People &amp; DMs</button>
+          <span class="badge badge-user" id="channelBadge">Public room</span>
+        </div>
+      </div>
+      <div class="messages" id="messages">
+        <div class="messages-empty"><strong>Loading messages…</strong></div>
+      </div>
+      <div id="chatNotice" class="notice hidden" role="alert"></div>
+      <form class="composer" id="composer">
+        <textarea id="messageInput" rows="1" maxlength="2000" placeholder="Type a message…" aria-label="Message"></textarea>
+        <button type="submit" class="btn btn-gold" id="sendBtn">Send</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · Techskool Chat</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/common.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <div class="auth-shell">
+    <section class="brand-panel">
+      <a class="brand" href="/">
+        <span class="brand-mark">TC</span>
+        <span class="brand-name">Techskool <span>Chat</span></span>
+      </a>
+      <div>
+        <h2>Where good conversations <em>begin.</em></h2>
+        <p>Sign in to connect with your team, share ideas and keep everything in one place.</p>
+        <ul class="feature-list">
+          <li><span>✦</span> One shared room for the whole team</li>
+          <li><span>✦</span> Private direct messages</li>
+          <li><span>✦</span> Admin oversight built in</li>
+        </ul>
+      </div>
+      <p style="margin:0;font-size:12px;color:var(--gold-light)">Built for the Techskool community.</p>
+    </section>
+
+    <main class="auth-card">
+      <h1>Welcome back</h1>
+      <p>Sign in to continue to Techskool Chat.</p>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Your password" autocomplete="current-password" required>
+        </div>
+        <p id="formError" class="form-error" role="alert"></p>
+        <button type="submit" class="btn btn-gold" id="submitBtn">Sign in</button>
+      </form>
+      <p class="auth-switch">Don't have an account? <a href="/signup">Create one</a></p>
+    </main>
+  </div>
+</body>
+</html>
